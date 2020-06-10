@@ -16,13 +16,13 @@
         
         <header>
             <img src="/assets/logo.svg" alt="Logomarca"> 
-            <a href="http://www.google.com.br">
+            <a href="index.html">
                 <span></span> 
                 Voltar para home
             </a> 
         </header>
 
-        <form action="">
+        <form action="/search-results.html">
             <h1>Cadastro do ponto de coleta</h1>
 
             <fieldset>
@@ -32,23 +32,23 @@
 
                 <div class="field">
                     <label for="name">Nome da entidade</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required>
                </div>
                <div class="fieldgroup">
                     <div class="field">
                         <label for="address">Endereço</label>
-                        <input type="text" name="address">
+                        <input type="text" name="address" required>
                     </div>
                     <div class="field">
                         <label for="address2">Número/Complemento</label>
-                        <input type="text" name="address2">
+                        <input type="text" name="address2" required>
                     </div>
                </div>
 
-               <div class="fieldgroup">
+               <div class="fieldgroup"> 
                 <div class="field">
                     <label for="state">Estado</label>
-                    <select name="uf">
+                    <select name="uf" required>
                         <option value="">Selecione o Estado</option>
                     </select>
 
@@ -56,7 +56,7 @@
                 </div>
                 <div class="field">
                     <label for="city">Cidade</label>
-                    <select name="city" disabled>
+                    <select name="city" disabled required>
                         <option value="">Selecione a Cidade</option>
                     </select>
                 </div>
@@ -68,6 +68,40 @@
                 <legend>
                     <h2>Itens de coleta</h2>
                 </legend>
+
+                <div class="items-grid">
+                    <li data-id="1" >
+                        <img src="/assets/lampadas.svg" alt="Lâmpadas">
+                        <span>Lâmpadas</span>
+                    </li>
+             
+                    <li data-id="2">
+                        <img src="/assets/baterias.svg" alt="Pilhas e Baterias">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+          
+                    <li data-id="3">
+                        <img src="/assets/papeis-papelao.svg" alt="Papéis e Papelão">
+                        <span>Papéis e Papelão</span>
+                    </li>
+        
+                    <li data-id="4">
+                        <img src="/assets/eletronicos.svg" alt="Résíduos Eletrônicos">
+                        <span>Resíduos Eletrônicos</span>
+                    </li>
+                 
+                    <li data-id="5">
+                        <img src="/assets/organicos.svg" alt="Resíduos Orgânicos">
+                        <span>Resíduos Orgânicos</span>
+                    </li>
+
+                    <li data-id="6">
+                        <img src="/assets/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+                </div>
+
+                <input type="hidden" name="items">
             </fieldset>
 
             <button type="submit">Cadastrar ponto de coleta</button>
